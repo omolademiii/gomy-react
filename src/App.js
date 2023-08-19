@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.css';
+import Nav from './Components/Nav';
+import Cards from './Components/Card';
 function App() {
+
+    let cards = [] ;
+    for (let i = 0; i < 3; i++){
+        cards.push(<Cards />)
+    }
+   
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav />
+      { cards }
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
